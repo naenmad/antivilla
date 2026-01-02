@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
     return (
         <footer className="w-full border-t border-slate-200 bg-slate-50/80 pt-16 pb-8">
@@ -13,19 +15,19 @@ export function Footer() {
                     <div>
                         <h4 className="font-bold text-slate-900 mb-4">Explore</h4>
                         <ul className="space-y-2 text-sm text-slate-600">
-                            <li><a href="#" className="hover:text-emerald-600 transition-colors">Search Villas</a></li>
-                            <li><a href="#" className="hover:text-emerald-600 transition-colors">Featured Categories</a></li>
-                            <li><a href="#" className="hover:text-emerald-600 transition-colors">New Arrivals</a></li>
+                            <li><Link href="/search" className="hover:text-emerald-600 transition-colors">Search Villas</Link></li>
+                            <li><Link href="/#" className="hover:text-emerald-600 transition-colors">Featured Categories</Link></li>
+                            <li><Link href="/#" className="hover:text-emerald-600 transition-colors">New Arrivals</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <h4 className="font-bold text-slate-900 mb-4">Support</h4>
                         <ul className="space-y-2 text-sm text-slate-600">
-                            <li><a href="#" className="hover:text-emerald-600 transition-colors">Help Center</a></li>
-                            <li><a href="#" className="hover:text-emerald-600 transition-colors">Terms of Service</a></li>
-                            <li><a href="#" className="hover:text-emerald-600 transition-colors">Privacy Policy</a></li>
-                            <li><a href="#" className="hover:text-emerald-600 transition-colors">Contact Us</a></li>
+                            <li><Link href="/help-center" className="hover:text-emerald-600 transition-colors">Help Center</Link></li>
+                            <li><Link href="/terms" className="hover:text-emerald-600 transition-colors">Terms of Service</Link></li>
+                            <li><Link href="/privacy" className="hover:text-emerald-600 transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="/contact" className="hover:text-emerald-600 transition-colors">Contact Us</Link></li>
                         </ul>
                     </div>
 
@@ -46,8 +48,8 @@ export function Footer() {
                         &copy; {new Date().getFullYear()} Antivilla. All rights reserved.
                     </p>
                     <div className="flex gap-6 text-xs text-slate-500 font-medium">
-                        <a href="#" className="hover:text-slate-900">Sitemap</a>
-                        <a href="#" className="hover:text-slate-900">Cookies</a>
+                        <Link href="/#" className="hover:text-slate-900">Sitemap</Link>
+                        <Link href="/#" className="hover:text-slate-900">Cookies</Link>
                     </div>
                 </div>
             </div>
