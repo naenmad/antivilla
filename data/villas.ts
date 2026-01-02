@@ -23,7 +23,8 @@ export const villas: Villa[] = [
         facilities: ["Warm Water Pool", "Wifi", "Kitchen", "BBQ Tool"],
         isVerified: true,
         oddEvenPlatePolicy: true,
-        reviews: []
+        reviews: [],
+        bookedDates: []
     },
     {
         id: "2",
@@ -46,7 +47,8 @@ export const villas: Villa[] = [
         facilities: ["Kitchen", "Wifi", "BBQ Tool"],
         isVerified: true,
         oddEvenPlatePolicy: false,
-        reviews: []
+        reviews: [],
+        bookedDates: []
     },
     {
         id: "3",
@@ -69,7 +71,8 @@ export const villas: Villa[] = [
         facilities: ["Private Pool", "Warm Water Pool", "Billiards", "Wifi", "Karaoke"],
         isVerified: true,
         oddEvenPlatePolicy: true,
-        reviews: []
+        reviews: [],
+        bookedDates: []
     },
     {
         id: "4",
@@ -92,6 +95,128 @@ export const villas: Villa[] = [
         facilities: ["Karaoke", "Billiards", "BBQ Tool", "Kitchen", "Wifi"],
         isVerified: true,
         oddEvenPlatePolicy: true,
-        reviews: []
+        reviews: [],
+        bookedDates: []
+    },
+    {
+        id: "5",
+        name: "Pine Forest Cabins",
+        slug: "pine-forest-cabins",
+        location: "Gunung Mas, Puncak",
+        description: "Cozy wooden cabins surrounded by pine trees. Perfect for nature lovers.",
+        pricePerNight: 850000,
+        bedrooms: 1,
+        bathrooms: 1,
+        maxGuests: 2,
+        rating: 4.7,
+        reviewCount: 34,
+        images: [
+            "https://images.unsplash.com/photo-1542718610-a1d656d1884c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1587061949409-02df41d5e562?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        ],
+        roadAccess: "Bus Big",
+        view: ["Mountain View"],
+        facilities: ["Wifi", "BBQ Tool"],
+        isVerified: true,
+        oddEvenPlatePolicy: false,
+        reviews: [],
+        bookedDates: []
+    },
+    {
+        id: "6",
+        name: "Sky High Villa",
+        slug: "sky-high-villa",
+        location: "Cisarua, Bogor",
+        description: "Modern glass villa with 360-degree views of the city lights/mountains. Premium experience with heated pool.",
+        pricePerNight: 5500000,
+        bedrooms: 4,
+        bathrooms: 4,
+        maxGuests: 10,
+        rating: 4.9,
+        reviewCount: 15,
+        images: [
+            "https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        ],
+        roadAccess: "Steep Terrain",
+        view: ["City Light", "Mountain View"],
+        facilities: ["Private Pool", "Warm Water Pool", "Wifi", "Kitchen", "Karaoke"],
+        isVerified: true,
+        oddEvenPlatePolicy: true,
+        reviews: [],
+        bookedDates: []
+    },
+    {
+        id: "7",
+        name: "Tea Garden Estate",
+        slug: "tea-garden-estate",
+        location: "Puncak Pass",
+        description: "Located right in the middle of tea plantations. Fresh air guaranteed.",
+        pricePerNight: 2100000,
+        bedrooms: 3,
+        bathrooms: 2,
+        maxGuests: 6,
+        rating: 4.5,
+        reviewCount: 56,
+        images: [
+            "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        ],
+        roadAccess: "Bus Big",
+        view: ["Tea Garden", "Mountain View"],
+        facilities: ["Kitchen", "Wifi", "BBQ Tool"],
+        isVerified: false,
+        oddEvenPlatePolicy: true,
+        reviews: [],
+        bookedDates: []
+    },
+    {
+        id: "8",
+        name: "Riverside Glamping",
+        slug: "riverside-glamping",
+        location: "Megamendung",
+        description: "Luxury camping by the river. Hear the sound of water all night long.",
+        pricePerNight: 650000,
+        bedrooms: 1,
+        bathrooms: 1,
+        maxGuests: 2,
+        rating: 4.8,
+        reviewCount: 112,
+        images: [
+            "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        ],
+        roadAccess: "Small Car Only",
+        view: ["Mountain View"],
+        facilities: ["BBQ Tool", "Wifi"],
+        isVerified: true,
+        oddEvenPlatePolicy: true,
+        reviews: [],
+        bookedDates: []
+    },
+    {
+        id: "9",
+        name: "Classic Colonial House",
+        slug: "colonial-house",
+        location: "Cipanas",
+        description: "A historical building with large yards. Great for weddings or large family reunions.",
+        pricePerNight: 6000000,
+        bedrooms: 6,
+        bathrooms: 5,
+        maxGuests: 25,
+        rating: 4.4,
+        reviewCount: 45,
+        images: [
+            "https://images.unsplash.com/photo-1580587771525-78b9dba3b91d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        ],
+        roadAccess: "Bus Big",
+        view: ["Mountain View"],
+        facilities: ["Kitchen", "Billiards", "Wifi", "BBQ Tool", "Karaoke"],
+        isVerified: true,
+        oddEvenPlatePolicy: false,
+        reviews: [],
+        bookedDates: []
     }
 ];
+

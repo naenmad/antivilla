@@ -24,17 +24,20 @@ export interface Villa {
   rating: number;
   reviewCount: number;
   images: string[];
-  
+
   // Specific Puncak Attributes
   roadAccess: RoadAccess;
   view: ViewType[];
   facilities: Facility[];
-  
+
   // "Anti-Zonk" Trust features
   isVerified: boolean;
   oddEvenPlatePolicy: boolean; // Ganjil-Genap warning
-  
+
   reviews?: Review[];
+
+  // Availability Logic for Calendar
+  bookedDates: string[]; // ISO Date strings "YYYY-MM-DD"
 }
 
 export interface Booking {

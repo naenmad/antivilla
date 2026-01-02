@@ -21,8 +21,11 @@ export function VillaCard({ villa }: VillaCardProps) {
     return (
         <Card className="overflow-hidden group border-0 shadow-sm hover:shadow-xl transition-all duration-300 rounded-2xl bg-white ring-1 ring-slate-100">
             <div className="relative aspect-[4/3] overflow-hidden">
-                <Carousel className="w-full h-full">
-                    <CarouselContent>
+                <Link href={`/villas/${villa.slug}`} className="absolute inset-0 z-0" aria-label={`View details for ${villa.name}`}>
+                    <span className="sr-only">View details</span>
+                </Link>
+                <Carousel className="w-full h-full pointer-events-none">
+                    <CarouselContent className="pointer-events-auto">
                         {villa.images.map((img, idx) => (
                             <CarouselItem key={idx}>
                                 <div className="relative aspect-[4/3] w-full">
@@ -36,9 +39,10 @@ export function VillaCard({ villa }: VillaCardProps) {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <div className="absolute inset-0 group-hover:opacity-100 opacity-0 transition-opacity duration-300 flex items-center justify-between px-2">
-                        <CarouselPrevious className="relative left-0 bg-white/90 hover:bg-white text-slate-800 border-0 h-8 w-8" />
-                        <CarouselNext className="relative right-0 bg-white/90 hover:bg-white text-slate-800 border-0 h-8 w-8" />
+                    <div className="absolute inset-x-2 bottom-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto z-10">
+                        {/* We use pointer-events-auto on buttons to ensure they are clickable even if container isn't full height */}
+                        <CarouselPrevious className="static translate-y-0 bg-white/90 hover:bg-white text-slate-800 border-0 h-9 w-9 shadow-md" />
+                        <CarouselNext className="static translate-y-0 bg-white/90 hover:bg-white text-slate-800 border-0 h-9 w-9 shadow-md" />
                     </div>
                 </Carousel>
 
