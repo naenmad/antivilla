@@ -1,5 +1,11 @@
 import Link from "next/link";
 import { Search, HelpCircle, FileText, MessageCircle, ChevronRight } from "lucide-react";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -61,22 +67,42 @@ export default function HelpCenterPage() {
                 </div>
             </div>
 
+
+
+
+
             {/* FAQ Section */}
-            <div className="container mx-auto px-4 py-16 max-w-4xl">
+            <div className="container mx-auto px-4 py-16 max-w-3xl">
                 <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
-                <div className="space-y-4">
+                <Accordion type="single" collapsible className="w-full bg-white rounded-xl border border-slate-200 shadow-sm px-6">
                     {[
-                        "How do I cancel my booking?",
-                        "Is it safe to pay through AntiVilla?",
-                        "What if the villa is different from the photos?",
-                        "How do I contact support?",
-                    ].map((question, i) => (
-                        <div key={i} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all cursor-pointer flex items-center justify-between group">
-                            <span className="font-medium text-slate-700 group-hover:text-emerald-700">{question}</span>
-                            <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-emerald-600 transition-transform group-hover:translate-x-1" />
-                        </div>
+                        {
+                            q: "How do I cancel my booking?",
+                            a: "You can cancel your booking through your 'My Bookings' page. Cancellation fees may apply depending on the villa's specific policy (Flexible, Moderate, or Strict). Please review the policy before cancelling.",
+                        },
+                        {
+                            q: "Is it safe to pay through AntiVilla?",
+                            a: "Absolutely. We use secure, encrypted payment gateways (Midtrans/Xendit) to process all transactions. We also hold the payment in escrow until 24 hours after you check in to ensure your money is safe.",
+                        },
+                        {
+                            q: "What if the villa is different from the photos?",
+                            a: "Our 'Anti-Zonk' guarantee is our core promise. We physically verify all listings. If the villa significantly differs from the photos or description upon arrival, contact us immediately for a full refund and assistance in finding alternative accommodation.",
+                        },
+                        {
+                            q: "How do I contact support?",
+                            a: "You can reach our support team 24/7 via the Contact Us page, email at support@antivilla.com, or through our dedicated WhatsApp hotline for urgent booking issues.",
+                        },
+                    ].map((faq, i) => (
+                        <AccordionItem key={i} value={`item-${i}`} className="border-b-slate-100 last:border-0">
+                            <AccordionTrigger className="text-left text-slate-800 hover:text-emerald-700 hover:no-underline py-5 text-base">
+                                {faq.q}
+                            </AccordionTrigger>
+                            <AccordionContent className="text-slate-500 leading-relaxed pb-6">
+                                {faq.a}
+                            </AccordionContent>
+                        </AccordionItem>
                     ))}
-                </div>
+                </Accordion>
             </div>
 
             {/* Contact CTA */}

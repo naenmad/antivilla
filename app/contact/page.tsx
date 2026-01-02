@@ -47,11 +47,16 @@ export default function ContactPage() {
                                     <MapPin className="w-6 h-6 text-emerald-400 mt-1" />
                                     <div>
                                         <p className="font-semibold text-emerald-100 text-sm uppercase tracking-wide">Office</p>
-                                        <p className="text-lg">
+                                        <a
+                                            href="https://www.google.com/maps/search/?api=1&query=Jl.+Raya+Puncak+No.+88+Cisarua+Bogor"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-lg hover:text-emerald-200 transition-colors block"
+                                        >
                                             Jl. Raya Puncak No. 88
                                             <br />Cisarua, Bogor
                                             <br />West Java, Indonesia
-                                        </p>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
