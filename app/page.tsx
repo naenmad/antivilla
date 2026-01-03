@@ -5,6 +5,7 @@ import { villas } from "@/data/villas";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { DotPattern } from "@/components/shared/BackgroundPatterns";
 
 export default function Home() {
   // Take first 3 verified villas
@@ -15,12 +16,15 @@ export default function Home() {
       <Hero />
       <FeaturedCategories />
 
-      <section className="py-20 bg-slate-50/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 bg-slate-50 overflow-hidden">
+        <DotPattern className="absolute inset-0 opacity-40 text-slate-300 pointer-events-none" />
+
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-            <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-3 tracking-tight">Verified Picks for You</h2>
-              <p className="text-slate-500 text-lg">Highest rated villas with checked path conditions.</p>
+            <div className="relative">
+              <div className="absolute -left-4 -top-4 w-20 h-20 bg-emerald-100/50 rounded-full blur-2xl z-0" />
+              <h2 className="relative z-10 text-3xl font-bold text-slate-900 mb-3 tracking-tight">Verified Picks for You</h2>
+              <p className="relative z-10 text-slate-500 text-lg">Highest rated villas with checked path conditions.</p>
             </div>
             <Button variant="ghost" className="hidden md:flex text-emerald-700 hover:text-emerald-800 hover:bg-emerald-50" asChild>
               <Link href="/search">
