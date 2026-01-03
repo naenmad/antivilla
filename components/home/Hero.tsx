@@ -21,7 +21,7 @@ export function Hero() {
             </div>
 
             <div className="relative z-10 container mx-auto px-4 flex flex-col items-center text-center mt-[-40px]">
-                <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 drop-shadow-2xl">
+                <h1 className="text-4xl md:text-7xl font-extrabold text-white tracking-tight mb-6 drop-shadow-2xl">
                     Escape to Puncak, <br className="hidden md:block" />
                     <span className="text-emerald-400">Worry-Free.</span>
                 </h1>
@@ -30,29 +30,30 @@ export function Hero() {
                 </p>
 
                 {/* Floating Search Bar */}
-                <div className="bg-white p-3 rounded-full shadow-2xl flex flex-col md:flex-row gap-2 w-full max-w-4xl transition-all hover:scale-[1.01] duration-300">
-                    <div className="flex-1 flex items-center px-6 md:border-r border-slate-100 h-14 md:h-auto">
-                        <MapPin className="w-5 h-5 text-emerald-600 mr-4" />
+                {/* Floating Search Bar */}
+                <div className="bg-white p-3 rounded-3xl md:rounded-full shadow-2xl flex flex-col md:flex-row gap-2 w-full max-w-4xl transition-all hover:scale-[1.01] duration-300">
+                    <div className="flex-1 flex items-center px-4 md:px-6 md:border-r border-slate-100 h-14 md:h-auto border-b md:border-b-0 border-dashed md:border-solid">
+                        <MapPin className="w-5 h-5 text-emerald-600 mr-4 shrink-0" />
                         <div className="text-left w-full">
                             <p className="text-[10px] font-bold text-slate-800 uppercase tracking-wider">Location</p>
                             <input
                                 type="text"
                                 placeholder="Where to?"
-                                className="w-full text-sm font-medium outline-none text-slate-700 placeholder:text-slate-400 bg-transparent"
+                                className="w-full text-sm font-medium outline-none text-slate-700 placeholder:text-slate-400 bg-transparent truncate"
                                 defaultValue="Puncak, Bogor"
                             />
                         </div>
                     </div>
 
-                    <div className="flex-1 flex items-center px-6 md:border-r border-slate-100 h-14 md:h-auto border-t md:border-t-0 border-dashed">
-                        <CalendarDays className="w-5 h-5 text-emerald-600 mr-4" />
+                    <div className="flex-1 flex items-center px-4 md:px-6 md:border-r border-slate-100 h-14 md:h-auto border-b md:border-b-0 border-dashed md:border-solid">
+                        <CalendarDays className="w-5 h-5 text-emerald-600 mr-4 shrink-0" />
                         <div className="text-left w-full">
                             <p className="text-[10px] font-bold text-slate-800 uppercase tracking-wider">Check In</p>
-                            <p className="text-sm font-medium text-slate-400 cursor-pointer hover:text-slate-700">Add dates</p>
+                            <p className="text-sm font-medium text-slate-400 cursor-pointer hover:text-slate-700 truncate">Add dates</p>
                         </div>
                     </div>
 
-                    <div className="flex-1 flex items-center px-6 h-14 md:h-auto border-t md:border-t-0 border-dashed">
+                    <div className="flex-1 flex items-center px-4 md:px-6 h-14 md:h-auto">
                         <div className="text-left w-full pl-2">
                             <p className="text-[10px] font-bold text-slate-800 uppercase tracking-wider">Guests</p>
                             <input
@@ -63,9 +64,10 @@ export function Hero() {
                         </div>
                     </div>
 
-                    <Button size="icon" className="h-14 w-14 rounded-full bg-emerald-600 hover:bg-emerald-700 shadow-lg shrink-0" asChild>
+                    <Button size="icon" className="h-12 w-full md:w-14 md:h-14 rounded-xl md:rounded-full bg-emerald-600 hover:bg-emerald-700 shadow-lg shrink-0 mt-2 md:mt-0" asChild>
                         <Link href="/search">
-                            <Search className="w-6 h-6 text-white" />
+                            <span className="md:hidden font-bold mr-2">Search</span>
+                            <Search className="w-5 h-5 md:w-6 md:h-6 text-white" />
                         </Link>
                     </Button>
                 </div>
