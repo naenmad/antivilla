@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import { DecorativeCircles } from "@/components/shared/BackgroundPatterns";
 
 export function Navbar() {
     return (
-        <nav className="sticky top-0 z-50 w-full border-b border-slate-200/50 bg-white/80 backdrop-blur-xl supports-[backdrop-filter]:bg-white/60 transition-all duration-300">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
+        <nav className="sticky top-0 z-50 w-full border-b border-slate-200/50 bg-white/80 backdrop-blur-xl supports-[backdrop-filter]:bg-white/60 transition-all duration-300 overflow-hidden">
+            <DecorativeCircles className="inset-0 z-0 opacity-40" />
+            <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2 group">
                     <span className="text-2xl font-extrabold tracking-tighter text-emerald-900 group-hover:text-emerald-700 transition-colors">Antivilla.</span>
                 </Link>

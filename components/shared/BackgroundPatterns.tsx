@@ -53,3 +53,16 @@ export function MeshGradient() {
         </div>
     );
 }
+
+export function DecorativeCircles({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+    return (
+        <div className={`absolute pointer-events-none overflow-hidden ${className}`} {...props}>
+            <div className="absolute -left-16 -top-16 w-64 h-64 border border-slate-200/60 rounded-full opacity-50" />
+            <div className="absolute -left-20 -top-20 w-80 h-80 border border-slate-200/40 rounded-full opacity-40" />
+            <div className="absolute -left-24 -top-24 w-96 h-96 border border-slate-200/20 rounded-full opacity-30" />
+
+            <div className="absolute -right-16 -bottom-16 w-64 h-64 border border-emerald-100/60 rounded-full opacity-50" />
+            <div className="absolute -right-20 -bottom-20 w-80 h-80 border border-emerald-100/40 rounded-full opacity-40" />
+        </div>
+    );
+}

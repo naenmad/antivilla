@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { DecorativeCircles } from "@/components/shared/BackgroundPatterns";
 
 export function Footer() {
     return (
-        <footer className="w-full border-t border-slate-200 bg-slate-50/80 pt-16 pb-8">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <footer className="relative w-full border-t border-slate-200 bg-slate-50/80 pt-16 pb-8 overflow-hidden">
+            <DecorativeCircles className="inset-0 z-0 opacity-50 pointer-events-none" />
+            <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                     <div className="md:col-span-1 space-y-4">
                         <span className="text-2xl font-extrabold text-emerald-900 tracking-tighter">Antivilla.</span>
