@@ -82,7 +82,7 @@ export default async function VillaDetailPage({ params }: PageProps) {
                     <div className="lg:col-span-2 space-y-10">
 
                         {/* Specs */}
-                        <div className="flex gap-8 py-8 border-y border-slate-100">
+                        <div className="grid grid-cols-2 md:flex md:flex-row gap-6 md:gap-12 py-8 border-y border-slate-100">
                             <div className="flex items-center gap-3">
                                 <div className="p-2.5 bg-slate-50 rounded-lg">
                                     <Bed className="w-6 h-6 text-slate-700" />
