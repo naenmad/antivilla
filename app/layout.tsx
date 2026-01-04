@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
 import { FloatingActions } from "@/components/shared/FloatingActions";
+import { ClipboardCustomizer } from "@/components/shared/ClipboardCustomizer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <FloatingActions />
+        <ClipboardCustomizer />
       </body>
     </html>
   );

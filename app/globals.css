@@ -122,4 +122,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Custom Text Selection */
+  ::selection {
+    @apply bg-emerald-200 text-emerald-900;
+  }
 }
